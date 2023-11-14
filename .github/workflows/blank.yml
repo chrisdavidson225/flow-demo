@@ -1,0 +1,25 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Testing
+        run: |
+          # Add your deployment commands for the testing environment here.
+
+      - name: Deploy to Staging
+        run: |
+          # Add your deployment commands for the staging environment here.
+
+      - name: Deploy to Production
+        run: |
+          # Add your deployment commands for the production environment here.
